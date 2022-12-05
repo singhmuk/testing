@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, {useState} from "react";
 function App() {
+  const [count, setCount] = useState(0);
+
+  const handleCount = () => {
+    setCount(count+1)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div data-testid="rootdiv">
+      <h1>Testing basics</h1>
+      <input type="text" placeholder="type name here" />
+      <button>test button</button>
+      <br/>
+      {count}<br/>
+      <button onClick={handleCount}>count</button>
+      <ul>
+        <li>Reactjs</li>
+        <li>Redux</li>
+      </ul>
     </div>
   );
 }
