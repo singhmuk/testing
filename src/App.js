@@ -2,18 +2,16 @@ import React, {useState} from "react";
 import Main from "./components/main";
 import User from "./components/user";
 import Button from "./components/button";
+import Toggle from "./components/toggle";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const handleCount = () => {
-    setCount(count+1)
-  }
+  
   return (
     <div>
       <Main />
       <User />
       <Button />
+      <Toggle />
     </div>
   );
 }
