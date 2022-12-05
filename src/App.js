@@ -1,4 +1,8 @@
 import React, {useState} from "react";
+import Main from "./components/main";
+import User from "./components/user";
+import Button from "./components/button";
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -6,17 +10,10 @@ function App() {
     setCount(count+1)
   }
   return (
-    <div data-testid="rootdiv">
-      <h1>Testing basics</h1>
-      <input type="text" placeholder="type name here" />
-      <button>test button</button>
-      <br/>
-      {count}<br/>
-      <button onClick={handleCount}>count</button>
-      <ul>
-        <li>Reactjs</li>
-        <li>Redux</li>
-      </ul>
+    <div>
+      <Main />
+      <User />
+      <Button />
     </div>
   );
 }
